@@ -18,7 +18,7 @@ const MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURICompone
 const INSTAGRAM = "https://www.instagram.com/desimeatandgrocery";
 
 const categories = [
-  { title: "Halal Meat", desc: "Fresh goat, chicken, beef & lamb cut to order.", img: meatCooler },
+  { title: "Halal Meat", desc: "Fresh goat, chicken & lamb cut to order.", img: meatCooler },
   { title: "Fresh Produce", desc: "Indian vegetables, herbs, chilies & root crops.", img: produceCooler },
   { title: "Spices & Masalas", desc: "Whole & ground — Laxmi, Swagat & more.", img: spices },
   { title: "Snacks & Sweets", desc: "Pani puri, namkeen, mithai and tea-time bites.", img: snacks },
