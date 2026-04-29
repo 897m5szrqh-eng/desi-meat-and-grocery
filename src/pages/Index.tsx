@@ -303,14 +303,13 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground/80">
         <div className="container py-14 grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <ArchLogo className="h-8 w-8" />
-              <div>
-                <div className="font-display text-lg font-700 text-primary-foreground">Desi</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] -mt-0.5">Halal Meat & Grocery</div>
-              </div>
+            <div className="mb-4 bg-primary-foreground/5 rounded-xl p-3 inline-block">
+              <img src={logo} alt="Desi Halal Meat & Grocery" className="h-12 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/60 max-w-xs">A family-owned Indian grocery & halal meat shop serving Anna, Melissa and the surrounding North Texas community.</p>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm text-primary-foreground hover:text-accent-glow transition-colors">
+              <Instagram className="h-4 w-4" /> @desimeatandgrocery
+            </a>
           </div>
           <div className="text-sm space-y-2">
             <div className="font-display text-base text-primary-foreground mb-3">Visit</div>
@@ -319,7 +318,8 @@ const Index = () => {
             <div>Open daily · Closes 8:30 PM</div>
           </div>
           <div className="text-sm space-y-2">
-            <div className="font-display text-base text-primary-foreground mb-3">Browse</div>
+            <div className="font-display text-base text-primary-foreground mb-3">Follow & Browse</div>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-accent-glow inline-flex items-center gap-2"><Instagram className="h-4 w-4" />Instagram</a>
             <a href="#categories" className="block hover:text-accent-glow">Shop categories</a>
             <a href="#gallery" className="block hover:text-accent-glow">Inside the store</a>
             <a href="#reviews" className="block hover:text-accent-glow">Reviews</a>
