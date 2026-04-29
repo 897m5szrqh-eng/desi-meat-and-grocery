@@ -50,8 +50,12 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <a href="#top" className="flex items-center gap-2.5">
+          <a href="#top" className="flex items-center gap-3">
             <img src={logo} alt="Desi Halal Meat & Grocery" className="h-10 md:h-12 w-auto" />
+            <div className="leading-tight hidden sm:block">
+              <div className="font-display text-lg md:text-xl font-bold text-primary">Desi</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground -mt-0.5">Halal Meat & Grocery</div>
+            </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#categories" className="hover:text-primary transition-colors">Shop</a>
