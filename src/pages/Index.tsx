@@ -7,23 +7,15 @@ import aisle from "@/assets/aisle.jpeg";
 import produceCooler from "@/assets/produce-cooler.jpeg";
 import dairyCooler from "@/assets/dairy-cooler.jpeg";
 import meatCooler from "@/assets/meat-cooler.jpeg";
-import { Phone, MapPin, Clock, Truck, Star, CreditCard, ParkingCircle, ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.svg";
+import { Phone, MapPin, Clock, Truck, Star, CreditCard, ParkingCircle, ArrowRight, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "817-743-2817";
 const PHONE_TEL = "+18177432817";
 const ADDRESS = "701 W White St Suite 1, Anna, TX 75409";
 const MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Desi Halal Meat & Grocery, " + ADDRESS)}`;
-
-const ArchLogo = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-    <path
-      d="M24 6c-7 0-12 5-12 12v22h6V28a6 6 0 1 1 12 0v12h6V18c0-7-5-12-12-12z"
-      fill="hsl(var(--accent))"
-    />
-    <rect x="22" y="2" width="4" height="6" rx="1" fill="hsl(var(--accent))" />
-  </svg>
-);
+const INSTAGRAM = "https://www.instagram.com/desimeatandgrocery";
 
 const categories = [
   { title: "Halal Meat", desc: "Fresh goat, chicken, beef & lamb cut to order.", img: meatCooler },
@@ -59,11 +51,7 @@ const Index = () => {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <a href="#top" className="flex items-center gap-2.5">
-            <ArchLogo className="h-8 w-8" />
-            <div className="leading-tight">
-              <div className="font-display text-lg font-700 text-primary">Desi</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground -mt-0.5">Halal Meat & Grocery</div>
-            </div>
+            <img src={logo} alt="Desi Halal Meat & Grocery" className="h-10 md:h-12 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#categories" className="hover:text-primary transition-colors">Shop</a>
@@ -71,9 +59,14 @@ const Index = () => {
             <a href="#reviews" className="hover:text-primary transition-colors">Reviews</a>
             <a href="#visit" className="hover:text-primary transition-colors">Visit</a>
           </nav>
-          <Button asChild variant="default" className="bg-accent hover:bg-accent-glow text-accent-foreground">
-            <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call</a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button asChild variant="ghost" size="icon" className="hidden sm:inline-flex text-primary hover:text-accent" aria-label="Instagram">
+              <a href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram className="h-5 w-5" /></a>
+            </Button>
+            <Button asChild variant="default" className="bg-accent hover:bg-accent-glow text-accent-foreground">
+              <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call</a>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -310,14 +303,13 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground/80">
         <div className="container py-14 grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <ArchLogo className="h-8 w-8" />
-              <div>
-                <div className="font-display text-lg font-700 text-primary-foreground">Desi</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] -mt-0.5">Halal Meat & Grocery</div>
-              </div>
+            <div className="mb-4 bg-primary-foreground/5 rounded-xl p-3 inline-block">
+              <img src={logo} alt="Desi Halal Meat & Grocery" className="h-12 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/60 max-w-xs">A family-owned Indian grocery & halal meat shop serving Anna, Melissa and the surrounding North Texas community.</p>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm text-primary-foreground hover:text-accent-glow transition-colors">
+              <Instagram className="h-4 w-4" /> @desimeatandgrocery
+            </a>
           </div>
           <div className="text-sm space-y-2">
             <div className="font-display text-base text-primary-foreground mb-3">Visit</div>
@@ -326,7 +318,8 @@ const Index = () => {
             <div>Open daily · Closes 8:30 PM</div>
           </div>
           <div className="text-sm space-y-2">
-            <div className="font-display text-base text-primary-foreground mb-3">Browse</div>
+            <div className="font-display text-base text-primary-foreground mb-3">Follow & Browse</div>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-accent-glow inline-flex items-center gap-2"><Instagram className="h-4 w-4" />Instagram</a>
             <a href="#categories" className="block hover:text-accent-glow">Shop categories</a>
             <a href="#gallery" className="block hover:text-accent-glow">Inside the store</a>
             <a href="#reviews" className="block hover:text-accent-glow">Reviews</a>
