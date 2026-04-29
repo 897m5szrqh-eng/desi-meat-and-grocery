@@ -7,23 +7,15 @@ import aisle from "@/assets/aisle.jpeg";
 import produceCooler from "@/assets/produce-cooler.jpeg";
 import dairyCooler from "@/assets/dairy-cooler.jpeg";
 import meatCooler from "@/assets/meat-cooler.jpeg";
-import { Phone, MapPin, Clock, Truck, Star, CreditCard, ParkingCircle, ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.svg";
+import { Phone, MapPin, Clock, Truck, Star, CreditCard, ParkingCircle, ArrowRight, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "817-743-2817";
 const PHONE_TEL = "+18177432817";
 const ADDRESS = "701 W White St Suite 1, Anna, TX 75409";
 const MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Desi Halal Meat & Grocery, " + ADDRESS)}`;
-
-const ArchLogo = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-    <path
-      d="M24 6c-7 0-12 5-12 12v22h6V28a6 6 0 1 1 12 0v12h6V18c0-7-5-12-12-12z"
-      fill="hsl(var(--accent))"
-    />
-    <rect x="22" y="2" width="4" height="6" rx="1" fill="hsl(var(--accent))" />
-  </svg>
-);
+const INSTAGRAM = "https://www.instagram.com/desimeatandgrocery";
 
 const categories = [
   { title: "Halal Meat", desc: "Fresh goat, chicken, beef & lamb cut to order.", img: meatCooler },
