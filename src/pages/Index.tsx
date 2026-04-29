@@ -51,11 +51,7 @@ const Index = () => {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <a href="#top" className="flex items-center gap-2.5">
-            <ArchLogo className="h-8 w-8" />
-            <div className="leading-tight">
-              <div className="font-display text-lg font-700 text-primary">Desi</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground -mt-0.5">Halal Meat & Grocery</div>
-            </div>
+            <img src={logo} alt="Desi Halal Meat & Grocery" className="h-10 md:h-12 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#categories" className="hover:text-primary transition-colors">Shop</a>
@@ -63,9 +59,14 @@ const Index = () => {
             <a href="#reviews" className="hover:text-primary transition-colors">Reviews</a>
             <a href="#visit" className="hover:text-primary transition-colors">Visit</a>
           </nav>
-          <Button asChild variant="default" className="bg-accent hover:bg-accent-glow text-accent-foreground">
-            <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call</a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button asChild variant="ghost" size="icon" className="hidden sm:inline-flex text-primary hover:text-accent" aria-label="Instagram">
+              <a href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram className="h-5 w-5" /></a>
+            </Button>
+            <Button asChild variant="default" className="bg-accent hover:bg-accent-glow text-accent-foreground">
+              <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call</a>
+            </Button>
+          </div>
         </div>
       </header>
 
